@@ -1,0 +1,102 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager MyNavigationManager
+@inject IJSRuntime JsRuntime
+<div class="page-container">
+    <header>
+        <img class="logo" src="./images/favicon.png" />
+    </header>
+
+    <nav>
+        <ul>
+            <li><a class="@homeActive" @onclick="@menuHome" @onclick:preventDefault>Home</a></li>
+            <li><a class="@counterActive" @onclick="@menuCounter" @onclick:preventDefault>Counter</a></li>
+            <li><a class="@weatherActive" @onclick="@menuWeather" @onclick:preventDefault>Weather</a></li>
+            <li><a class="@page4Active" @onclick="@menuPage4" @onclick:preventDefault>Page 4</a></li>
+            <li><a class="@page5Active" @onclick="@menuPage5" @onclick:preventDefault>Page 5</a></li>
+            <li><a class="@page6Active" @onclick="@menuPage6" @onclick:preventDefault>Page 6</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section class="sec1"></section>
+
+         <article>
+                @Body
+        </article>
+
+    </div>
+        
+    <footer>
+        Made by D. 2024
+    </footer>
+    
+</div>
+
+@code{
+    private string homeActive = "active";
+    private string weatherActive = "";
+    private string counterActive = "";
+    private string page4Active = "";
+    private string page5Active = "";
+    private string page6Active = "";
+
+    private void menuHome(){
+        homeActive = "active";
+        weatherActive = "";
+        counterActive = "";
+        page4Active = "";
+        page5Active = "";
+        page6Active = "";
+        MyNavigationManager.NavigateTo("");
+    }
+
+    private void menuCounter() {
+        homeActive = "";
+        weatherActive = "";
+        counterActive = "active";
+        page4Active = "";
+        page5Active = "";
+        page6Active = "";
+        MyNavigationManager.NavigateTo("counter");
+    }
+
+    private void menuWeather() {
+        homeActive = "";
+        weatherActive = "active";
+        counterActive = "";
+        page4Active = "";
+        page5Active = "";
+        page6Active = "";
+        MyNavigationManager.NavigateTo("weather");
+    }
+
+    private void menuPage4() {
+        homeActive = "";
+        weatherActive = "";
+        counterActive = "";
+        page4Active = "active";
+        page5Active = "";
+        page6Active = "";
+        MyNavigationManager.NavigateTo("page4");
+    }
+
+    private void menuPage5() {
+        homeActive = "";
+        weatherActive = "";
+        counterActive = "";
+        page4Active = "";
+        page5Active = "active";
+        page6Active = "";
+        MyNavigationManager.NavigateTo("page5");
+    }
+
+    private void menuPage6() {
+        homeActive = "";
+        weatherActive = "";
+        counterActive = "";
+        page4Active = "";
+        page5Active = "";
+        page6Active = "active";
+        MyNavigationManager.NavigateTo("page6");
+    }
+}

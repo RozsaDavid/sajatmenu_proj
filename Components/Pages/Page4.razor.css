@@ -1,0 +1,11 @@
+﻿img{
+    width:60%;
+    border: 2px solid white;
+    border-radius: 50px;
+    transition: 500ms linear;
+}
+
+img:hover{
+    transform: scale(1.05);
+}
+    

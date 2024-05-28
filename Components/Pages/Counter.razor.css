@@ -1,0 +1,20 @@
+﻿p {
+    text-align: center;
+    font-size: 24px;
+}
+
+.button_class {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    background-color: darkred;
+    border-radius: 20px;
+    border: 2px solid grey;
+    color: lightgray;
+}
+
